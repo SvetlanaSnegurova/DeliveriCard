@@ -20,7 +20,7 @@ public class DeliveryCardTest {
     }
     
     @Test
-    void shoulDeliveryCardOrder() {
+    void shouldDeliveryCardOrder() {
         $("[data-test-id=city] input").setValue("Москва");
         String calendar = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[placeholder='Дата встречи']").doubleClick().sendKeys(Keys.BACK_SPACE);
