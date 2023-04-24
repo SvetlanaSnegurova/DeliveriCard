@@ -18,7 +18,7 @@ public class DeliveryCardTest {
     void setUp() {
         open("http://localhost:9999");
     }
-
+    
     @Test
     void shoulDeliveryCardOrder() {
         $("[data-test-id=city] input").setValue("Москва");
@@ -30,6 +30,6 @@ public class DeliveryCardTest {
         $("[data-test-id=agreement]").click();
         $("[class='button__text']").click();
         $("[data-test-id=notification]").waitUntil(visible, 15000)
-                .shouldHave(exactText("Успешно! Встреча успешно забронирована на "+ calendar));
+                .shouldHave(exactText("Успешно! Встреча успешно забронирована на " + calendar));
     }
 }
